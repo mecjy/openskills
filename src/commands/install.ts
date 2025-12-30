@@ -194,7 +194,7 @@ async function installSingleLocalSkill(
   // Security: ensure target path stays within target directory
   const resolvedTargetPath = resolve(targetPath);
   const resolvedTargetDir = resolve(targetDir);
-  if (!resolvedTargetPath.startsWith(resolvedTargetDir + '/')) {
+  if (!resolvedTargetPath.startsWith(resolvedTargetDir + sep)) {
     console.error(chalk.red(`Security error: Installation path outside target directory`));
     process.exit(1);
   }
